@@ -36,11 +36,13 @@ For each release of MCP, PLexus or pharo-image-fs, the catalog is read
 again, from checkouts of the releases in use, then generated and signed:
 
 ```sh
-npx pharo-agent-telemetry exception-names --mcp <MCP> --cli <PLexus CLI> --out <directory>
-npx pharo-agent-telemetry catalog --mcp <MCP> --plexus <PLexus> --pharo-image-fs <pharo-image-fs> --exceptions <directory>
+npx @evref-bl/pharo-agent-telemetry exception-names --mcp <MCP> --cli <PLexus CLI> --out <directory>
+npx @evref-bl/pharo-agent-telemetry catalog --mcp <MCP> --plexus <PLexus> --pharo-image-fs <pharo-image-fs> --exceptions <directory>
 npm run generate
-npx pharo-agent-telemetry sign-catalog --key <the study's key, outside this repository>
+npx @evref-bl/pharo-agent-telemetry sign-catalog --key <the study's key, outside this repository>
 ```
 
 `npm publish` refuses while `study.json` lacks any collector fact the page
-owes participants.
+owes participants. The import job keeps the spans as long as its
+`RETENTION_DAYS` says: leave it at its default, 365, which is what
+`study.json`'s retention text states.
