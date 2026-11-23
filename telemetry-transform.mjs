@@ -209,6 +209,11 @@ const allowlist = {
       "type": "string",
       "values": ["direct", "via_tool_call"]
     },
+    "pharo.mcp.tool.advertised": {
+      "about": "Whether the image's server lists the tool in tools/list, where an agent sees it first, or the agent had to find it. Absent for a name no tool has.",
+      "from": ["pharo-mcp"],
+      "type": "bool"
+    },
     "pharo.mcp.client.name": {
       "about": "The agent host, as it introduces itself to MCP's server, when it is one the allowlist knows: under PLexus, PLexus itself.",
       "from": ["pharo-mcp"],

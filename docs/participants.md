@@ -124,6 +124,7 @@ What happened:
 | `plexus.image.save` | plexus | Whether stopping an image saved it. | true or false |
 | `pharo.mcp.tool.origin` | pharo-mcp | mcp for one of MCP's own tools, other for a tool another package added, unknown for a name no tool has. Names are kept only for mcp and unknown. | one of `mcp`, `other`, `unknown`, else `other` |
 | `pharo.mcp.dispatch_path` | pharo-mcp | How the image dispatched the request. | one of `direct`, `via_tool_call` |
+| `pharo.mcp.tool.advertised` | pharo-mcp | Whether the image's server lists the tool in tools/list, where an agent sees it first, or the agent had to find it. Absent for a name no tool has. | true or false |
 | `pharo.mcp.client.name` | pharo-mcp | The agent host, as it introduces itself to MCP's server, when it is one the allowlist knows: under PLexus, PLexus itself. | one of the agent hosts, else `_OTHER` |
 | `pharo.mcp.client.version` | pharo-mcp | Its version, major and minor, beside a name the allowlist knows. | a version, major and minor, only beside a `pharo.mcp.client.name` of that set |
 | `pharo.mcp.argument.names` | pharo-mcp | The names of the arguments the tool declares that the call gave, never their values. | a list of at most 32, each an identifier, made of the vocabulary's words |
