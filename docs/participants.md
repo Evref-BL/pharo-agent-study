@@ -239,10 +239,10 @@ your data protection authority: in France, the CNIL (cnil.fr).
 With Node 22.15 or later:
 
 ```sh
-npx @evref-bl/pharo-agent-field-study preview   # see what would be sent, sending nothing
-npx @evref-bl/pharo-agent-field-study join
-npx @evref-bl/pharo-agent-field-study status
-npx @evref-bl/pharo-agent-field-study leave
+npx @evref-bl/pharo-agent-study preview   # see what would be sent, sending nothing
+npx @evref-bl/pharo-agent-study join
+npx @evref-bl/pharo-agent-study status
+npx @evref-bl/pharo-agent-study leave
 ```
 
 `join` copies the agent into `pharo-agent-telemetry/` under
@@ -257,7 +257,7 @@ in PLexus's settings file, `plexus/otel.env`, and in MCP's,
 `$XDG_CONFIG_HOME` too when it is set:
 
 ```text
-# pharo-agent-telemetry: joined. Run `npx @evref-bl/pharo-agent-field-study leave`, or delete these lines down to the end line, to stop.
+# pharo-agent-telemetry: joined. Run `npx @evref-bl/pharo-agent-study leave`, or delete these lines down to the end line, to stop.
 OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:<its port>
 OTEL_EXPORTER_OTLP_PROTOCOL=http/json
 OTEL_TRACES_EXPORTER=otlp
@@ -278,7 +278,7 @@ spans but those "What is kept" says it cannot tell from MCP's.
 Where your system will not run a service of your account (over SSH on macOS,
 or on Linux without a systemd user session), `join --no-service` installs
 none: the agent then sends only while
-`npx @evref-bl/pharo-agent-field-study agent` runs.
+`npx @evref-bl/pharo-agent-study agent` runs.
 
 PLexus reads its file at start, and passes it on to the images it starts; an
 image reads MCP's at every start. From PLexus 0.21 and MCP 4.3, a

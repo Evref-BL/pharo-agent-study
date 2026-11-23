@@ -1,6 +1,6 @@
 {
-  "id": "pharo-agent-field-study",
-  "page": "https://github.com/Evref-BL/pharo-agent-field-study/blob/main/docs/participants.md",
+  "id": "pharo-agent-study",
+  "page": "https://github.com/Evref-BL/pharo-agent-study/blob/main/docs/participants.md",
   "collector": {
     "endpoint": null,
     "token": null,

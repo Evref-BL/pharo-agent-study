@@ -1,4 +1,4 @@
-# pharo-agent-field-study
+# pharo-agent-study
 
 Evref-BL's study of how agents use the Pharo agent tools, run by
 [pharo-agent-telemetry](https://github.com/Evref-BL/pharo-agent-telemetry),
@@ -7,10 +7,10 @@ whose README says how a study works and how its collector is deployed.
 Participants read [docs/participants.md](docs/participants.md), then:
 
 ```sh
-npx @evref-bl/pharo-agent-field-study preview
-npx @evref-bl/pharo-agent-field-study join
-npx @evref-bl/pharo-agent-field-study status
-npx @evref-bl/pharo-agent-field-study leave
+npx @evref-bl/pharo-agent-study preview
+npx @evref-bl/pharo-agent-study join
+npx @evref-bl/pharo-agent-study status
+npx @evref-bl/pharo-agent-study leave
 ```
 
 This repository is the study's data, and what pharo-agent-telemetry makes of

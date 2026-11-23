@@ -1,11 +1,11 @@
 {
-  "name": "@evref-bl/pharo-agent-field-study",
+  "name": "@evref-bl/pharo-agent-study",
   "version": "0.1.0",
   "description": "Evref-BL's study of how agents use the Pharo tools: preview, join or leave it.",
   "license": "MIT",
   "type": "module",
   "bin": {
-    "pharo-agent-field-study": "bin/pharo-agent-field-study.js"
+    "pharo-agent-study": "bin/pharo-agent-study.js"
   },
   "files": [
     "bin",
@@ -28,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Evref-BL/pharo-agent-field-study.git"
+    "url": "git+https://github.com/Evref-BL/pharo-agent-study.git"
   }
 }
