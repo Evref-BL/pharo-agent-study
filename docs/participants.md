@@ -207,10 +207,10 @@ Berger-Levrault decides why and how this data is processed, the GDPR's controlle
 ## Who else holds it
 
 - Oracle Cloud hosts the virtual machine the collector runs on, in Paris, France (eu-paris-1), and processes the data on the controller's behalf.
-- Once a day, a scheduled job in Berger-Levrault's GitLab copies what the collector received, loads it into Berger-Levrault's Elasticsearch (Amazon Web Services, Paris), and deletes it from the machine and from the job's own workspace.
-- Berger-Levrault's Elasticsearch (Amazon Web Services, Paris) keeps it, as "How long" says.
+- Once a day, a scheduled job in Berger-Levrault's infrastructure copies what the collector received, loads it into Berger-Levrault's database, and deletes it from the machine and from the job's own workspace.
+- Berger-Levrault's database keeps it, as "How long" says.
 
-Everything about this study is public: its code, its rules, this page, and what it finds. The spans themselves may be published too, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn, and "How long" does not apply to it.
+Everything about this study is public: its code, its rules, this page, and what it finds. The spans themselves may be published too, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn.
 
 ## Why, and on what basis
 
@@ -225,7 +225,7 @@ it arrived, a day the file's spans also carry; the import keeps neither. The
 collector never deletes a file the daily import has not loaded, and the
 import deletes each file once Elasticsearch holds its spans. Should the
 import stop, the collector refuses new spans once its archive takes half its
-disk's free space, rather than delete any. Elasticsearch keeps the spans in one index a month, under the lifecycle policy the import job installs, which deletes each index twelve months after it was made. Reports derived from them hold counts, never spans, and are kept.
+disk's free space, rather than delete any. The database keeps the spans with no time limit, so that they can become a dataset. Reports made from them hold counts, never spans.
 
 ## Your rights
 

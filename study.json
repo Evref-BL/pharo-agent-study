@@ -12,8 +12,8 @@
     "host": {
       "provider": "Oracle Cloud",
       "region": "Paris, France (eu-paris-1)",
-      "importer": "Berger-Levrault's GitLab",
-      "archive": "Berger-Levrault's Elasticsearch (Amazon Web Services, Paris)"
+      "importer": "Berger-Levrault's infrastructure",
+      "archive": "Berger-Levrault's database"
     },
     "catalogUrl": "https://pharo-agent-telemetry.duckdns.org/pharo-agent-telemetry/catalog.json",
     "catalogPublicKey": "-gR_VYF5LGPoaQEpixKoENcCvlRFS_A3TrifVqY2tFg"
@@ -21,8 +21,8 @@
   "text": {
     "purpose": "Evref-BL, which makes these tools, collects it so they can change to fit that use: tools nobody reaches, arguments agents expect but the tools do not take, answers that are too long, mistakes agents repair.",
     "why": "To change the tools from how agents use them, rather than from our own sessions alone.",
-    "retention": "Elasticsearch keeps the spans in one index a month, under the lifecycle policy the import job installs, which deletes each index twelve months after it was made. Reports derived from them hold counts, never spans, and are kept.",
+    "retention": "The database keeps the spans with no time limit, so that they can become a dataset. Reports made from them hold counts, never spans.",
     "authority": "in France, the CNIL (cnil.fr).",
-    "publication": "Everything about this study is public: its code, its rules, this page, and what it finds. The spans themselves may be published too, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn, and \"How long\" does not apply to it."
+    "publication": "Everything about this study is public: its code, its rules, this page, and what it finds. The spans themselves may be published too, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn."
   }
 }
