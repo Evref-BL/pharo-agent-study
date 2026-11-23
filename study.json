@@ -1,0 +1,19 @@
+{
+  "id": "pharo-agent-field-study",
+  "page": "https://github.com/Evref-BL/pharo-agent-field-study/blob/main/docs/participants.md",
+  "collector": {
+    "endpoint": null,
+    "token": null,
+    "controller": null,
+    "dpo": null,
+    "host": null,
+    "catalogUrl": null,
+    "catalogPublicKey": null
+  },
+  "text": {
+    "purpose": "Evref-BL, which makes these tools, collects it so they can change to fit that use: tools nobody reaches, arguments agents expect but the tools do not take, answers that are too long, mistakes agents repair.",
+    "why": "To change the tools from how agents use them, rather than from our own sessions alone.",
+    "retention": "Elasticsearch keeps the spans in one index a month, under the lifecycle policy the import job installs, which deletes each index twelve months after it was made. Reports derived from them hold counts, never spans, and are kept.",
+    "authority": "in France, the CNIL (cnil.fr)."
+  }
+}
