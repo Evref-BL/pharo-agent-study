@@ -2,7 +2,7 @@
   "id": "pharo-agent-study",
   "page": "https://github.com/Evref-BL/pharo-agent-study/blob/main/docs/participants.md",
   "collector": {
-    "endpoint": null,
+    "endpoint": "https://pharo-agent-telemetry.duckdns.org",
     "token": "6cbd8e98ad2e7242f4e08b98370f39e3",
     "controller": {
       "name": "Berger-Levrault",
@@ -15,7 +15,7 @@
       "importer": "Berger-Levrault's GitLab",
       "archive": "Berger-Levrault's Elasticsearch (Amazon Web Services, Paris)"
     },
-    "catalogUrl": null,
+    "catalogUrl": "https://pharo-agent-telemetry.duckdns.org/pharo-agent-telemetry/catalog.json",
     "catalogPublicKey": "-gR_VYF5LGPoaQEpixKoENcCvlRFS_A3TrifVqY2tFg"
   },
   "text": {
