@@ -202,13 +202,15 @@ its notice.
 
 ## Who answers for it
 
-*The controller and how to reach them: not set yet. Nobody can join until it is.* Its data protection officer can be reached at **[DPO CONTACT: TO BE FILLED IN study.json BEFORE PUBLISHING]**.
+Berger-Levrault decides why and how this data is processed, the GDPR's controller. Write to Gabriel Darbord (gabriel.darbord@berger-levrault.com, or publicly at https://github.com/Evref-BL/pharo-agent-study/issues) with any question, or to withdraw. Its data protection officer can be reached at dpo@berger-levrault.com.
 
 ## Who else holds it
 
-*Where the collector runs, the GitLab that copies its archive, and where the archive is kept: not set yet. Nobody can join until it is.*
+- Oracle Cloud hosts the virtual machine the collector runs on, in Paris, France (eu-paris-1), and processes the data on the controller's behalf.
+- Once a day, a scheduled job in Berger-Levrault's GitLab copies what the collector received, loads it into Berger-Levrault's Elasticsearch (Amazon Web Services, Paris), and deletes it from the machine and from the job's own workspace.
+- Berger-Levrault's Elasticsearch (Amazon Web Services, Paris) keeps it, as "How long" says.
 
-Nobody else receives it.
+Everything about this study is public: its code, its rules, this page, and what it finds. The spans themselves may be published too, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn, and "How long" does not apply to it.
 
 ## Why, and on what basis
 
