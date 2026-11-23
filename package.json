@@ -1,6 +1,6 @@
 {
   "name": "@evref-bl/pharo-agent-study",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Evref-BL's study of how agents use the Pharo tools: preview, join or leave it.",
   "license": "MIT",
   "type": "module",
