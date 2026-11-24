@@ -63,7 +63,7 @@ processors:
     trace_statements:
       - context: resource
         statements:
-          - "keep_keys(attributes, [\"service.name\", \"service.version\", \"os.type\", \"process.runtime.name\", \"process.runtime.version\", \"deployment.environment.name\", \"pharo_agent_evals.variant\"])"
+          - "keep_keys(attributes, [\"service.name\", \"service.version\", \"os.type\", \"process.runtime.name\", \"process.runtime.version\", \"deployment.environment.name\", \"pharo_agent_evals.variant\", \"pharo_agent_telemetry.filter.version\"])"
           - "delete_key(attributes, \"service.name\") where not IsString(attributes[\"service.name\"])"
           - "set(attributes[\"service.name\"], \"****\") where IsString(attributes[\"service.name\"]) and IsMatch(attributes[\"service.name\"], \"(?is)^.*(/Users/|/home/|[A-Z]:\\\\\\\\Users\\\\\\\\).*$\")"
           - "set(attributes[\"service.name\"], \"****\") where IsString(attributes[\"service.name\"]) and IsMatch(attributes[\"service.name\"], \"(?s)^.*[A-Za-z0-9._%+-]@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2}.*$\")"
@@ -109,6 +109,12 @@ processors:
           - "set(attributes[\"pharo_agent_evals.variant\"], \"****\") where IsString(attributes[\"pharo_agent_evals.variant\"]) and IsMatch(attributes[\"pharo_agent_evals.variant\"], \"(?s)^.*\\\\b(?:[0-9]{1,3}\\\\.){3}[0-9]{1,3}\\\\b.*$\")"
           - "set(attributes[\"pharo_agent_evals.variant\"], \"****\") where IsString(attributes[\"pharo_agent_evals.variant\"]) and IsMatch(attributes[\"pharo_agent_evals.variant\"], \"(?is)^.*(?:::|\\\\b[0-9a-f]{1,4}(?::[0-9a-f]{1,4}){7}\\\\b).*$\")"
           - "delete_key(attributes, \"pharo_agent_evals.variant\") where IsString(attributes[\"pharo_agent_evals.variant\"]) and not IsMatch(attributes[\"pharo_agent_evals.variant\"], \"^(?:[A-Za-z0-9][A-Za-z0-9._-]{0,63})$\")"
+          - "delete_key(attributes, \"pharo_agent_telemetry.filter.version\") where not IsString(attributes[\"pharo_agent_telemetry.filter.version\"])"
+          - "set(attributes[\"pharo_agent_telemetry.filter.version\"], \"****\") where IsString(attributes[\"pharo_agent_telemetry.filter.version\"]) and IsMatch(attributes[\"pharo_agent_telemetry.filter.version\"], \"(?is)^.*(/Users/|/home/|[A-Z]:\\\\\\\\Users\\\\\\\\).*$\")"
+          - "set(attributes[\"pharo_agent_telemetry.filter.version\"], \"****\") where IsString(attributes[\"pharo_agent_telemetry.filter.version\"]) and IsMatch(attributes[\"pharo_agent_telemetry.filter.version\"], \"(?s)^.*[A-Za-z0-9._%+-]@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2}.*$\")"
+          - "set(attributes[\"pharo_agent_telemetry.filter.version\"], \"****\") where IsString(attributes[\"pharo_agent_telemetry.filter.version\"]) and IsMatch(attributes[\"pharo_agent_telemetry.filter.version\"], \"(?s)^.*\\\\b(?:[0-9]{1,3}\\\\.){3}[0-9]{1,3}\\\\b.*$\")"
+          - "set(attributes[\"pharo_agent_telemetry.filter.version\"], \"****\") where IsString(attributes[\"pharo_agent_telemetry.filter.version\"]) and IsMatch(attributes[\"pharo_agent_telemetry.filter.version\"], \"(?is)^.*(?:::|\\\\b[0-9a-f]{1,4}(?::[0-9a-f]{1,4}){7}\\\\b).*$\")"
+          - "delete_key(attributes, \"pharo_agent_telemetry.filter.version\") where IsString(attributes[\"pharo_agent_telemetry.filter.version\"]) and not IsMatch(attributes[\"pharo_agent_telemetry.filter.version\"], \"^(?:[0-9]{1,4}(?:\\\\.[0-9]{1,4}){0,2}(?:-(?:alpha|beta|rc)(?:\\\\.[0-9]{1,4})?)?)$\")"
           - "delete_key(attributes, \"pharo_agent_evals.variant\") where attributes[\"deployment.environment.name\"] != \"eval\""
           - "set(schema_url, \"\")"
           - "set(dropped_attributes_count, 0)"

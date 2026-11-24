@@ -104,6 +104,7 @@ Where it ran:
 | `process.runtime.version` | plexus, pharo-mcp | Node's major version, or Pharo's major and minor. | a version, major from plexus, major and minor from pharo-mcp |
 | `deployment.environment.name` | plexus, pharo-mcp | field for participants, eval for our own evaluation runs, preview while previewing, check for pharo-agent-telemetry check-deployment. | one of `field`, `eval`, `preview`, `check` |
 | `pharo_agent_evals.variant` | plexus, pharo-mcp | Which variant of an evaluation run sent the span: the build under test, which may report a released version. Kept only for eval. | a build's name, only beside `deployment.environment.name` `eval` |
+| `pharo_agent_telemetry.filter.version` | plexus, pharo-mcp | The version of this study's filter on your machine that kept the span, which the agent sets: data kept by an older filter, before you joined again, tells itself apart. | a version |
 
 What happened:
 

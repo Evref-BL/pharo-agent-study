@@ -44,7 +44,8 @@
     "process.runtime.name": {"about": "nodejs or pharo.", "type": "string", "values": ["nodejs", "pharo"]},
     "process.runtime.version": {"about": "Node's major version, or Pharo's major and minor.", "type": "string", "extract": {"plexus": "^v?([0-9]{1,4})(?:\\.[\\s\\S]*)?$", "pharo-mcp": "^v?([0-9]{1,4}\\.[0-9]{1,4})(?:[.+-][\\s\\S]*)?$"}, "pattern": "version"},
     "deployment.environment.name": {"about": "field for participants, eval for our own evaluation runs, preview while previewing, check for pharo-agent-telemetry check-deployment.", "type": "string", "values": ["field", "eval", "preview", "check"]},
-    "pharo_agent_evals.variant": {"about": "Which variant of an evaluation run sent the span: the build under test, which may report a released version. Kept only for eval.", "type": "string", "pattern": "variant", "when": {"deployment.environment.name": "eval"}}
+    "pharo_agent_evals.variant": {"about": "Which variant of an evaluation run sent the span: the build under test, which may report a released version. Kept only for eval.", "type": "string", "pattern": "variant", "when": {"deployment.environment.name": "eval"}},
+    "pharo_agent_telemetry.filter.version": {"about": "The version of this study's filter on your machine that kept the span, which the agent sets: data kept by an older filter, before you joined again, tells itself apart.", "type": "string", "pattern": "version"}
   },
   "span": {
     "session.id": {"about": "Groups the calls of one working session. PLexus makes it at random, or MCP when the call came without one, and either starts another after 30 minutes without a call; it is replaced by its keyed hash before it leaves your machine.", "type": "string", "pattern": "text", "hash": "session"},
