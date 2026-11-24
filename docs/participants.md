@@ -211,7 +211,7 @@ Berger-Levrault decides why and how this data is processed, the GDPR's controlle
 - Once a day, a scheduled job in Berger-Levrault's infrastructure copies what the collector received, loads it into Berger-Levrault's database, and deletes it from the machine and from the job's own workspace.
 - Berger-Levrault's database keeps it, as "How long" says.
 
-Everything about this study is public: its code, its rules, this page, and what it finds. The spans themselves may be published too, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn.
+This study's code, its rules and this page are public. Berger-Levrault wishes to publish what it finds too, and maybe the spans themselves, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn.
 
 ## Why, and on what basis
 
