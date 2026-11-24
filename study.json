@@ -19,10 +19,10 @@
     "catalogPublicKey": "-gR_VYF5LGPoaQEpixKoENcCvlRFS_A3TrifVqY2tFg"
   },
   "text": {
-    "purpose": "Evref-BL, which makes these tools, collects it so they can change to fit that use: tools nobody reaches, arguments agents expect but the tools do not take, answers that are too long, mistakes agents repair.",
+    "purpose": "Berger-Levrault, whose research team makes these tools, collects it so they can change to fit that use: tools nobody reaches, arguments agents expect but the tools do not take, answers that are too long, mistakes agents repair.",
     "why": "To change the tools from how agents use them, rather than from our own sessions alone.",
     "retention": "The database keeps the spans with no time limit, so that they can become a dataset. Reports made from them hold counts, never spans.",
     "authority": "in France, the CNIL (cnil.fr).",
-    "publication": "Everything about this study is public: its code, its rules, this page, and what it finds. The spans themselves may be published too, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn."
+    "publication": "This study's code, its rules and this page are public. Berger-Levrault wishes to publish what it finds too, and maybe the spans themselves, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn."
   }
 }

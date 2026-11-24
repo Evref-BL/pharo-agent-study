@@ -2,7 +2,7 @@
 # What the Pharo tools send when you join
 
 The Pharo agent tools (the pharo-agent plugin, PLexus and Pharo MCP) can
-record how agents use them. Evref-BL, which makes these tools, collects it so they can change to fit that use: tools nobody reaches, arguments agents expect but the tools do not take, answers that are too long, mistakes agents repair. Joining is opt-in, and
+record how agents use them. Berger-Levrault, whose research team makes these tools, collects it so they can change to fit that use: tools nobody reaches, arguments agents expect but the tools do not take, answers that are too long, mistakes agents repair. Joining is opt-in, and
 nothing is sent until you join. The tools never ask you to.
 
 ## How it leaves your machine
@@ -211,7 +211,7 @@ Berger-Levrault decides why and how this data is processed, the GDPR's controlle
 - Once a day, a scheduled job in Berger-Levrault's infrastructure copies what the collector received, loads it into Berger-Levrault's database, and deletes it from the machine and from the job's own workspace.
 - Berger-Levrault's database keeps it, as "How long" says.
 
-Everything about this study is public: its code, its rules, this page, and what it finds. The spans themselves may be published too, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn.
+This study's code, its rules and this page are public. Berger-Levrault wishes to publish what it finds too, and maybe the spans themselves, as an open dataset for anyone interested, holding nothing more than this page lists. A published copy cannot be withdrawn.
 
 ## Why, and on what basis
 
