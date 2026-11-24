@@ -2,7 +2,7 @@
 # What the Pharo tools send when you join
 
 The Pharo agent tools (the pharo-agent plugin, PLexus and Pharo MCP) can
-record how agents use them. Evref-BL, which makes these tools, collects it so they can change to fit that use: tools nobody reaches, arguments agents expect but the tools do not take, answers that are too long, mistakes agents repair. Joining is opt-in, and
+record how agents use them. Berger-Levrault, whose research team makes these tools, collects it so they can change to fit that use: tools nobody reaches, arguments agents expect but the tools do not take, answers that are too long, mistakes agents repair. Joining is opt-in, and
 nothing is sent until you join. The tools never ask you to.
 
 ## How it leaves your machine

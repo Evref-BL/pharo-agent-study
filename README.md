@@ -1,6 +1,6 @@
 # pharo-agent-study
 
-Evref-BL's study of how agents use the Pharo agent tools, run by
+Berger-Levrault's study of how agents use the Pharo agent tools, run by
 [pharo-agent-telemetry](https://github.com/Evref-BL/pharo-agent-telemetry),
 whose README says how a study works and how its collector is deployed.
 
