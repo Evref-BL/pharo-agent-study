@@ -115,6 +115,7 @@ What happened:
 | `mcp.protocol.version` | pharo-mcp | The MCP protocol version the client's request declared, a date. | a date |
 | `gen_ai.tool.name` | plexus, pharo-mcp | The tool's name: one a project publishes, else a name the agent asked for that no tool has, or MCP's own, when made of words of the vocabulary. | a tool a project publishes, else an identifier made of the vocabulary's words, else `_OTHER` |
 | `error.type` | plexus, pharo-mcp | How a call failed: tool_error, a JSON-RPC or HTTP code, how a connection failed, a PLexus error code, or an exception class of Pharo, MCP or Node. | one of the call failures, PLexus error codes, Node exception classes or MCP exception classes, or a numeric code, else `_OTHER` |
+| `rpc.status_code` | plexus, pharo-mcp | The JSON-RPC error code a call was answered with: also on the image's span of a request it refused as the caller's, which error.type leaves out. | a numeric code |
 | `plexus.client.name` | plexus | The agent host, as it introduces itself to PLexus's server, when it is one the allowlist knows. | one of the agent hosts, else `_OTHER` |
 | `plexus.client.version` | plexus | The agent host's version, major and minor, beside a name the allowlist knows. | a version, major and minor, only beside a `plexus.client.name` of that set |
 | `plexus.call.index` | plexus | Where the call comes in its session: 1 for the first. | a whole number from 1 |

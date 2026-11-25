@@ -144,6 +144,11 @@ const allowlist = {
       "pattern": "code",
       "otherwise": "_OTHER"
     },
+    "rpc.status_code": {
+      "about": "The JSON-RPC error code a call was answered with: also on the image's span of a request it refused as the caller's, which error.type leaves out.",
+      "type": "string",
+      "pattern": "code"
+    },
     "plexus.client.name": {
       "about": "The agent host, as it introduces itself to PLexus's server, when it is one the allowlist knows.",
       "from": ["plexus"],

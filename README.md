@@ -32,12 +32,12 @@ npm run generate   # after changing study.json, the allowlist or the catalog
 npm test           # generated files current, rule fixtures through both filters
 ```
 
-For each release of MCP, PLexus or pharo-image-fs, the catalog is read
+For each release of MCP or PLexus, the catalog is read
 again, from checkouts of the releases in use, then generated and signed:
 
 ```sh
 npx @evref-bl/pharo-agent-telemetry exception-names --mcp <MCP> --cli <PLexus CLI> --out <directory>
-npx @evref-bl/pharo-agent-telemetry catalog --mcp <MCP> --plexus <PLexus> --pharo-image-fs <pharo-image-fs> --exceptions <directory>
+npx @evref-bl/pharo-agent-telemetry catalog --mcp <MCP> --plexus <PLexus> --exceptions <directory>
 npm run generate
 npx @evref-bl/pharo-agent-telemetry sign-catalog --key <the study's key, outside this repository>
 ```
