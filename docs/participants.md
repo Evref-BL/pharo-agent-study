@@ -225,7 +225,7 @@ what the tools do for you.
 The collector writes what arrives into one file a day, named after the day
 it arrived, a day the file's spans also carry; the import keeps neither. The
 collector never deletes a file the daily import has not loaded, and the
-import deletes each file once Elasticsearch holds its spans. Should the
+import deletes each file once the study's store holds its spans. Should the
 import stop, the collector refuses new spans once its archive takes half its
 disk's free space, rather than delete any. The database keeps the spans with no time limit, so that they can become a dataset. Reports made from them hold counts, never spans.
 
