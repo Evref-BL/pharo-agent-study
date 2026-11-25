@@ -115,6 +115,7 @@ What happened:
 | `mcp.protocol.version` | pharo-mcp | The MCP protocol version the client's request declared, a date. | a date |
 | `gen_ai.tool.name` | plexus, pharo-mcp | The tool's name: one a project publishes, else a name the agent asked for that no tool has, or MCP's own, when made of words of the vocabulary. | a tool a project publishes, else an identifier made of the vocabulary's words, else `_OTHER` |
 | `error.type` | plexus, pharo-mcp | How a call failed: tool_error, a JSON-RPC or HTTP code, how a connection failed, a PLexus error code, or an exception class of Pharo, MCP or Node. | one of the call failures, PLexus error codes, Node exception classes or MCP exception classes, or a numeric code, else `_OTHER` |
+| `rpc.status_code` | plexus, pharo-mcp | The JSON-RPC error code a call was answered with: also on the image's span of a request it refused as the caller's, which error.type leaves out. | a numeric code |
 | `plexus.client.name` | plexus | The agent host, as it introduces itself to PLexus's server, when it is one the allowlist knows. | one of the agent hosts, else `_OTHER` |
 | `plexus.client.version` | plexus | The agent host's version, major and minor, beside a name the allowlist knows. | a version, major and minor, only beside a `plexus.client.name` of that set |
 | `plexus.call.index` | plexus | Where the call comes in its session: 1 for the first. | a whole number from 1 |
@@ -224,7 +225,7 @@ what the tools do for you.
 The collector writes what arrives into one file a day, named after the day
 it arrived, a day the file's spans also carry; the import keeps neither. The
 collector never deletes a file the daily import has not loaded, and the
-import deletes each file once Elasticsearch holds its spans. Should the
+import deletes each file once the study's store holds its spans. Should the
 import stop, the collector refuses new spans once its archive takes half its
 disk's free space, rather than delete any. The database keeps the spans with no time limit, so that they can become a dataset. Reports made from them hold counts, never spans.
 

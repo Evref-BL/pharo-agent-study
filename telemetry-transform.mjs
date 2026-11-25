@@ -8,7 +8,7 @@
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 
-export const version = "0.4.0";
+export const version = "0.5.0";
 
 const allowlist = {
   "$comment": "What the study keeps, and in what shape. `pharo-agent-telemetry generate` writes, from this file and catalog.json (the tools and words `pharo-agent-telemetry catalog` reads in the projects' source, and the classes MCP names an exception by in an image of each Pharo version), the filter `join` installs on a participant's machine (telemetry-transform.mjs), the collector's configuration (collector/otelcol.yaml), which applies the same rules again, and docs/participants.md; `pharo-agent-telemetry check` fails when any is out of date. A span is kept only from the services listed, with their scope, one of their span names, and the kinds and attributes a service `requires`. Every attribute not listed is dropped; a listed one is kept only from the services in `from` (both when absent), with the type given, and only when its value has the shape given (and, with `words`, is made of `vocabulary` words in that form: a name, or a JSON pointer of names), else it is dropped, or replaced by `otherwise`; a list with an element of another shape is dropped, but for `published`, whose elements not in a `published` set become `otherwise`. `extract` keeps the first group of a pattern, per service; `when` keeps a resource attribute only beside another's value; `beside` keeps an attribute only beside another that holds a value of its set, not its `otherwise`. `name` marks a name of the tool called: dropped (or replaced by `nameOther`) on a pharo-mcp span whose origin is other for a tool no project publishes, and on a plexus span unless it is for one of PLexus's own tools it did not forward. `own` marks what MCP says only of its own answer: dropped on a pharo-mcp span whose origin is other, for a tool no project publishes. `tool` marks the tool's name: kept when a project publishes it; else, on a pharo-mcp span whose origin is mcp or unknown, when it is made of vocabulary words; else `otherwise`. `grows` names the sets that grow with the projects' releases, by the shape of their members (a tool's name, a word, a code, a class): the only sets a signed catalog the agents fetch may add to.",
@@ -143,6 +143,11 @@ const allowlist = {
       "values": ["call failures", "PLexus error codes", "Node exception classes", "MCP exception classes"],
       "pattern": "code",
       "otherwise": "_OTHER"
+    },
+    "rpc.status_code": {
+      "about": "The JSON-RPC error code a call was answered with: also on the image's span of a request it refused as the caller's, which error.type leaves out.",
+      "type": "string",
+      "pattern": "code"
     },
     "plexus.client.name": {
       "about": "The agent host, as it introduces itself to PLexus's server, when it is one the allowlist knows.",
