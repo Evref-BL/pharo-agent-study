@@ -44,5 +44,5 @@ npx @evref-bl/pharo-agent-telemetry sign-catalog --key <the study's key, outside
 
 `npm publish` refuses while `study.json` lacks any collector fact the page
 owes participants. The import job keeps the spans as long as its
-`RETENTION_DAYS` says: leave it at its default, 365, which is what
-`study.json`'s retention text states.
+`RETENTION_DAYS` says, which must be what `study.json`'s retention text
+states.
