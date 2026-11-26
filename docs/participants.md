@@ -86,12 +86,12 @@ with any other word in it cannot. Both lists are in
 [allowlist.json](../allowlist.json).
 
 The names of a tool another package added to an image (`pharo.mcp.tool.origin`
-`other`, or no origin) are not kept: its tool's name becomes `_OTHER` and
-the other names are dropped, unless a project publishes that tool. PLexus
+`other`, or no origin) are kept only when a project publishes that tool:
+otherwise its tool's name becomes `_OTHER`, and the other names and its
+error code are dropped. PLexus
 names only its own tools: on a call PLexus passes on to an image, its span
 keeps the tool's name only when a project publishes it, and never the
-arguments' names, which the image's span reports as above. An error code is
-kept only for MCP's own tools.
+arguments' names, which the image's span reports as above.
 
 Where it ran:
 
@@ -141,7 +141,7 @@ What happened:
 | `pharo.mcp.test.count` | pharo-mcp | How many tests ran. | the lower bound of its bucket: 0, 1, 2, 6, 21, 101 |
 | `pharo.mcp.tool.refs` | pharo-mcp | The tools a discovery call (tool_search, tool_get) named. | a list of at most 16, each a tool a project publishes, else `_OTHER` |
 | `pharo.mcp.error.kind` | pharo-mcp | The kind of error MCP reported. | one of `input_schema`, `domain`, `tool_result`, `json_rpc`, `exception` |
-| `pharo.mcp.error.code` | pharo-mcp | The error code MCP gave its answer. | an identifier, made of the vocabulary's words, else `_OTHER`, only for MCP's own tools |
+| `pharo.mcp.error.code` | pharo-mcp | The error code MCP gave its answer. | an identifier, made of the vocabulary's words, else `_OTHER`, not for another package's tool that no project publishes |
 | `pharo.mcp.error.schema.violation_count` | pharo-mcp | How many times the arguments broke the tool's input schema, where the rules and places they broke are each named once. | the lower bound of its bucket: 0, 1, 2, 6, 21, 101 |
 | `pharo.mcp.error.schema.keywords` | pharo-mcp | Which schema rules they broke. | a list of at most 8, each one of the schema keywords |
 | `pharo.mcp.error.schema.paths` | pharo-mcp | Where in the tool's input they broke them. | a list of at most 8, each a JSON pointer, each name in it made of the vocabulary's words |
