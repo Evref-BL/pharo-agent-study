@@ -75,9 +75,9 @@ masked, whole, and the mask has no attribute's shape.
 A name an agent or another package chooses (`gen_ai.tool.name`, `plexus.argument.names`, `plexus.argument.unknown_names`, `pharo.mcp.argument.names`, `pharo.mcp.argument.unknown_names`, `pharo.mcp.tool.refs`, `pharo.mcp.error.code`, `pharo.mcp.error.schema.paths`) is kept only
 when it is the name of a tool a project publishes, or when every word of it
 (split at `_`, `-` and capitals) is in the vocabulary: the
-1128 words of the names in the code of MCP and PLexus (their
+1129 words of the names in the code of MCP and PLexus (their
 tools, arguments, errors and the rest), read from
-their source (MCP v4.6.0, PLexus v0.24.0), and of a list of words agents guess. Any
+their source (MCP v4.6.1, PLexus v1.1.0), and of a list of words agents guess. Any
 other name is dropped, or becomes `_OTHER`. A name is kept only when it is
 made of words the tools use, so a name of your own made only of such words
 can pass, such as a class `ClassName` or an argument `class_name`; a name
